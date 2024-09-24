@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDEX</title>
+    <link rel="stylesheet" href="pokestyle.css">
+</head>
+<body>
+    <div class="container">
+        <button class="btn-header">Apri il PokéDex</button>
+
+        <header>
+            <nav class="nav">
+               
+                <ul class="navlist">
+                    <li class="navitem"><button class="btn-header" id = "tutti">tutti</button></li>
+                    <li class="navitem"><button class="btn-header" id = "normal">normale</button></li>
+                    <li class="navitem"><button class="btn-header" id = "grass">erba</button></li>
+                    <li class="navitem"><button class="btn-header" id = "water">acqua</button></li>
+                    <li class="navitem"><button class="btn-header" id = "fire">fuoco</button></li>
+                    <li class="navitem"><button class="btn-header" id = "electric">elettro</button></li>
+                    <li class="navitem"><button class="btn-header" id = "ice">ghiaccio</button></li>
+                    <li class="navitem"><button class="btn-header" id = "fighting">lotta</button></li>
+                    <li class="navitem"><button class="btn-header" id = "poison">veleno</button></li>
+                    <li class="navitem"><button class="btn-header" id = "psychic">psico</button></li>
+                    <li class="navitem"><button class="btn-header" id = "bug">coleot.</button></li>
+                    <li class="navitem"><button class="btn-header" id = "ground">terra</button></li>
+                    <li class="navitem"><button class="btn-header" id = "flying">volante</button></li>
+                    <li class="navitem"><button class="btn-header" id = "rock">roccia</button></li>
+                    <li class="navitem"><button class="btn-header" id = "ghost">spettro</button></li>
+                    <li class="navitem"><button class="btn-header" id = "dark">buio</button></li>
+                    <li class="navitem"><button class="btn-header" id = "dragon">drago</button></li>
+                    <li class="navitem"><button class="btn-header" id = "steel">acciaio</button></li>
+                    <li class="navitem"><button class="btn-header" id = "fairy">folletto</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="poketutti">
+                <!-- grid display dei pokemon -->
+                <div class="pokemon-todos" id="listapokemon">
+                    <!-- Scheda pokemon -->
+                    <div class ="pokemon">
+                        <p class="pokemon-num-back">#132</p>
+                        <div class="pokemon-img">
+                            <div class="official">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png" alt="ditto">
+                                    <p class="sprites">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="ditto">
+                                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png">
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="pokemon-info">
+                            <div class="box-nome">
+                                <p class="pokemon-id">#132</p>
+                                <h2 class="nome-pokemon">ditto</h2>
+    
+                            </div>
+                            <div class="pokemon-tipo">
+                                <p class="tipo" id = "normal">normale</p>
+                                <p class="tipo" id = "fighting">fighting</p>
+                            </div>
+                            <div class="pokemon-stat">
+                                <p class="stat">10cm</p>
+                                <p class="stat">20kg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    
+    </div>
+    
+
+    <script src="pokedex2.js"></script>
+</body>
+</html>

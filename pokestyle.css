@@ -1,0 +1,294 @@
+
+/*Definire i colori della pagina a monte così da poterli cambiare un'unica volta */
+:root {
+    --base-black: #1b1b1b;  
+    --base-gray: #dbdbdb;   
+    --base-white: #f1f1f1;
+
+    --type-normal: #aeaeae; 
+    --type-grass: #09b428;
+    --type-water: #1e989c;
+    --type-fire: #dc3333;
+    --type-electric: #e3e023;
+    --type-ice: #4ee3e9;
+    --type-fighting: #620d0d;
+    --type-poison: #290d37;
+    --type-psychic: #dd6ad1;
+    --type-bug: #93b933;
+    --type-ground:  #663611;
+    --type-flying: #a2ecef;
+    --type-rock: #3a1e08;
+    --type-ghost:  #46175e;
+    --type-dark:  #0b011e;
+    --type-dragon:  #2e2c78;
+    --type-steel:  #645f66;
+    --type-fairy: #eb8aa4;
+}
+
+/* reset del margine pagina. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--base-black);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*reset lista stile */
+ul {
+    list-style-type: none;
+}
+
+/* reset stile bottoni dei tipi pokemon */
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+
+}
+
+/* definizione altezze pagina */
+body {
+    min-height: 100vh;
+    background-color: var(--base-gray);
+}
+
+header {
+    padding-block: 1rem;
+    box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, .4);
+
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navlist{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+/* STILE BOTTONI */
+.btn-header {
+    background-color: var(--base-gray);
+    padding: .5rem;
+    border-radius: 100vmax;
+    text-transform: uppercase;
+    font-weight: 550;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.btn-header:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+}
+
+/* STILE MAIN */
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pokemon-todos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* style box info pokemon. Parent of all pokémon in the dex */
+.pokemon {
+    border-radius: 1rem;
+    background-color: var(--base-white);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* pokemon back number */
+.pokemon-num-back {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 6rem;
+    font-weight: 600;
+    z-index: -1;
+    color: var(--base-gray);
+}
+
+/* gestione box immagine pokemon.*/
+.pokemon-img {
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+}
+/*  Gestione png. Nome classe + img  */
+.pokemon-img img{
+    width: 100%;
+    max-width: 6rem;
+}
+.sprites{
+    padding-inline: .5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* gestione infobox, segue ordine html */
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-inline: 1rem;
+    align-items: center;
+    text-align: center;
+}
+.box-nome{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pokemon-id{
+    background-color: var(--base-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font-size: .75rem;
+    font-weight: 500;
+}
+.nome-pokemon {
+    font-size: 1.4rem; 
+}
+
+/* gestione targhette tipi */
+.pokemon-tipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    justify-content: center;
+   
+}
+.tipo{
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+/* gestione stat */
+.pokemon-stat {
+    display: flex;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+.stat {
+    background-color: var(--base-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+
+/* definizione colore stili tramite loro id (html) */
+#normal{
+    background-color: var(--type-normal);
+    color: var(--base-black);
+}
+
+#grass{
+    background-color: var(--type-grass);
+    color: var(--base-black);
+}
+
+#water{
+    background-color: var(--type-water);
+    color: var(--base-white);
+}
+
+#fire{
+    background-color: var(--type-fire);
+    color: var(--base-black);
+}
+
+#electric {
+    background-color: var(--type-electric);
+    color: var(--base-black);
+}
+
+#ice {
+    background-color: var(--type-ice);
+    color: var(--base-black);
+}
+
+#fighting {
+    background-color: var(--type-fighting);
+    color: var(--base-white);
+}
+
+#poison {
+    background-color: var(--type-poison);
+    color: var(--base-white);
+}
+
+#psychic {
+    background-color: var(--type-psychic);
+    color: var(--base-black);
+}
+
+#bug {
+    background-color: var(--type-bug);
+    color: var(--base-black);
+}
+
+#ground {
+    background-color: var(--type-ground);
+    color: var(--base-white);
+}
+
+#flying {
+    background-color: var(--type-flying);
+    color: var(--base-black);
+}
+
+#rock {
+        background-color: var(--type-rock);
+        color: var(--base-white);
+}
+
+#ghost {
+    background-color: var(--type-ghost);
+    color: var(--base-white);
+}
+
+#dark {
+    background-color: var(--type-dark);
+    color: var(--base-white);
+}
+
+#dragon {
+    background-color: var(--type-dragon);
+    color: var(--base-white);
+}
+#steel {
+    background-color: var(--type-steel);
+    color: var(--base-white);
+}
+#fairy{
+    background-color: var(--type-fairy);
+    color: var(--base-black);
+}
